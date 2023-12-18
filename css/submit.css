@@ -1,0 +1,65 @@
+.balloon-013__img-wrap {
+    max-width: 100%;
+}
+
+.balloon-013__img {
+    width: 100%;
+    height: auto;
+}
+
+.balloon-013__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: .7em;
+    border: 3px solid #d6dde3;
+    border-radius: 10px;
+    font-size: .95em;
+}
+
+.balloon-013__text::before,
+.balloon-013__text::after {
+    position: absolute;
+    top: -15px;
+    width: 30px;
+    height: 15px;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    content: '';
+}
+
+.balloon-013__text::before {
+    background-color: #d6dde3;
+}
+
+.balloon-013__text::after {
+    top: -11px;
+    background-color: #fff;
+}
+
+@media only screen and (min-width: 521px) {
+    .balloon-013 {
+        display: flex;
+        align-items: center;
+        gap: 0 15px;
+    }
+
+    .balloon-013__img-wrap,
+    .balloon-013__text {
+        flex-basis: 50%;
+    }
+
+    .balloon-013__text::before,
+    .balloon-013__text::after {
+        top: unset;
+        left: -15px;
+        width: 15px;
+        height: 30px;
+        clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    }
+
+    .balloon-013__text::after {
+        top: unset;
+        left: -11px;
+    }
+}

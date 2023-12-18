@@ -1,4 +1,7 @@
 <?php
+    require_once('funcs.php');
+    $pdo = db_conn();
+
     $company = $_POST['company'];
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -22,13 +25,9 @@
     $sum_e = $south_e + $north_e + $east_e;
 
     $assign = "";
-    $status = "";
+    $status = 0;
         
-    try {
-        $pdo = new PDO('mysql:dbname=dsc_db; charset=utf8; host=localhost','root','');
-    } catch (PDOException $e) {
-        exit('DBConnectError:'.$e->getMessage());
-    }
+    db_conn();
 
     $stmt = $pdo->prepare(
         "INSERT INTO dsc_request(id, company ,name, email, date, size, sum_a, sum_b, sum_c, sum_d, sum_e, assign, status, request_date)
@@ -46,7 +45,7 @@
     $stmt->bindValue(':sum_d', $sum_d, PDO::PARAM_INT);
     $stmt->bindValue(':sum_e', $sum_e, PDO::PARAM_INT);
     $stmt->bindValue(':assign', $assign, PDO::PARAM_STR);
-    $stmt->bindValue(':status', $status, PDO::PARAM_STR);
+    $stmt->bindValue(':status', $status, PDO::PARAM_INT);
 
     $status = $stmt->execute();
    
@@ -74,7 +73,8 @@
         </div>
         <p class="balloon-013__text">
             ご依頼いただきありがとうございます。<br>
-            平日9:30〜17:30が営業時間となります。
+            追って担当者よりご連絡いたします。<br>
+            （営業時間：平日9:30〜17:30）<br>
         </p>
     </div>
 </body>

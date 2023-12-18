@@ -1,11 +1,8 @@
 <?php
     require_once('funcs.php');
+    $pdo = db_conn();
 
-    try {
-        $pdo = new PDO('mysql:dbname=dsc_db; charset=utf8; host=localhost','root','');
-    } catch (PDOException $e) {
-        exit('DBConnectError:'.$e->getMessage());
-    }
+    db_conn();
 
     $stmt = $pdo->prepare("SELECT * FROM dsc_request");
     $status = $stmt->execute();
@@ -18,6 +15,7 @@
 
     while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
         $view .= '<li>'.'会社名：'.h($result['company']).' （ご担当者様：'.h($result['name']) .'）';
+        $view .= '<a class="a" href="detail.php?id='. $result['id'] .'">変更</a>';
         $view .= '<p>'.'折込日：'.h($result['date']).'<p>';
         $view .= '<p>'.'連絡先：'.h($result['email']) .'</p>';
         $view .='<p>'. 'A地区：'.h($result['sum_a']) .'枚</p>';

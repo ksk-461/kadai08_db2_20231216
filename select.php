@@ -14,16 +14,31 @@
     }else{
 
     while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
-        $view .= '<li>'.'会社名：'.h($result['company']).' （ご担当者様：'.h($result['name']) .'）';
-        $view .= '<a class="a" href="detail.php?id='. $result['id'] .'">変更</a>';
-        $view .= '<p>'.'折込日：'.h($result['date']).'<p>';
+        $view .= '<div class="list-004">';
+        $view .= '<div class="head">';
+        $view .= '<h2>会社名：'.h($result['company']).'</h2>';
+        $view .= '<p>ご担当者：'.h($result['name']) .'様</p>';
         $view .= '<p>'.'連絡先：'.h($result['email']) .'</p>';
-        $view .='<p>'. 'A地区：'.h($result['sum_a']) .'枚</p>';
-        $view .='<p>'. 'B地区：'.h($result['sum_b']) .'枚</p>';
-        $view .='<p>'. 'C地区：'.h($result['sum_c']) .'枚</p>';
-        $view .='<p>'. 'D地区：'.h($result['sum_d']) .'枚</p>';
-        $view .='<p>'. 'E地区：'.h($result['sum_e']) .'枚</p>';
-        $view .= '</li>';
+        $view .= '<p>'.'折込日：'.h($result['date']).'<p>';
+        $view .= '</div>';
+        $view .= '<div class="status">';
+        // 担当者は変更画面で設定？？
+        // $view .= 
+        //     '<select type="select">
+        //         <option>a</option>
+        //         <option>b</option>
+        //     </select>';
+        $view .= '<a class="a" href="detail.php?id='. $result['id'] .'">変更</a>';
+        $view .= '<a class="a" href="#">削除</a>';
+        $view .= '</div>';
+        $view .= '<ul>';
+        $view .='<li>'. 'A地区：'.n(h($result['sum_a'])).'枚</li>';
+        $view .='<li>'. 'B地区：'.n(h($result['sum_b'])) .'枚</li>';
+        $view .='<li>'. 'C地区：'.n(h($result['sum_c'])) .'枚</li>';
+        $view .='<li>'. 'D地区：'.n(h($result['sum_d'])) .'枚</li>';
+        $view .='<li>'. 'E地区：'.n(h($result['sum_e'])) .'枚</li>';
+        $view .= '</ul>';
+        $view .= '</div>';
   }
 
 }
@@ -43,9 +58,7 @@
 
     <div id="wrap">
         <div class="list">
-            <ul class="list-009">
-                <?= $view ?>
-            </ul>
+            <?= $view ?>
         </div>
     </div>
 </head>

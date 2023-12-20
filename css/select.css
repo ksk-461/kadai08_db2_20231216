@@ -6,6 +6,7 @@
 
 header{
     text-align: center;
+    margin-bottom: 10px;
 }
 
 #wrap {
@@ -13,31 +14,49 @@ header{
     justify-content: center;
 }
 
+.list {
+    padding: 0 10px;
+}
 
+.list h2 {
+    text-align: center;
+}
+
+.task_1 {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
 
 .list-004 {
     border: 2px solid #6bb3e6;
     border-radius: 20px;
     margin: 20px 0;
+    min-width: 400px;
 }
 
 .head {
     align-items: center;
-    margin: 0;
+    margin-bottom: 15px;
     padding: 10px;
     background-color: #6bb3e6;
-    border-radius: 18px 18px 0 0;
+    border-radius: 15px 15px 0 0;
     color: #fff;
     font-weight: 600;
 }
 
+/* 孫にだけ指定できる？？ */
+
+/* .task_0.list-004.head {
+    background-color: #6bb3e6;
+    border-radius: 15px 15px 0 0;    
+} */
+
 .list-004 h2 {
-    text-decoration: underline;
+    border-bottom: 1px dashed gray;
 }
 
 .list-004 p {
     margin: 3px 0;
-    text-indent: 1rem;
 }
 
 .list-004 ul {
@@ -53,4 +72,39 @@ header{
 .list-004 li::marker {
     color: #6bb3e6;
     font-size: 1.1em;
+}
+
+.update:hover {
+ background-color: #6bb3e6;   
+}
+
+.delete:hover {
+    background-color: rgb(236, 180, 180);
+}
+
+.button {
+    text-decoration: none;
+    color: inherit;
+    width: fit-content;
+    min-width: 100px;
+    height: 45px;
+    margin: 0 5px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2.5px solid #E0E1E4;
+    box-shadow: 0px 0px 20px -20px;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.2s ease-in-out 0ms;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+}
+  
+.button:hover {
+    /* background-color: #F2F2F2; */
+    box-shadow: 0px 0px 20px -18px;
+}
+  
+.button:active {
+    transform: scale(0.95);
 }

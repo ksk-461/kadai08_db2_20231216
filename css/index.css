@@ -297,3 +297,11 @@
         max-width: 100%;
     }
 }
+
+.label {
+    font-weight: bold;
+}
+
+.inp {
+    text-indent: 1rem;
+}

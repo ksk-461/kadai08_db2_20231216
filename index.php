@@ -12,7 +12,7 @@
 </head>
 <body>
    <div id="wrap">
-        <form method="post" action="./confirm.php">
+        <form method="post" action="./submit.php">
 
             <div class="user_info">
                 <h1 class="heading_label">見積もり依頼フォーム</h1>
@@ -132,11 +132,10 @@
                 
             </div>
 
-            <input type="submit" class="confirm" value="確認">
 
             <!-- 確認モーダルを表示して、一度試算したかったが時間間に合わず次回に持ち越し -->
             <!-- このまま使用するとSQLに二重に登録されてしまう。 -->
-            <!-- <div class="modal-002__wrap">
+            <div class="modal-002__wrap">
                 <input type="radio" id="modal-002__open" class="modal_inp_none modal-002__open-input" name="modal-002__trigger tri"/>
                 <label for="modal-002__open" class="modal-002__open-label">確認</label>
                 <input type="radio" id="modal-002__close" class="modal_inp_none" name="modal-002__trigger tri"/>
@@ -144,6 +143,16 @@
                     <div class="modal-002__content-wrap">
                         <label for="modal-002__close" class="modal-002__close-label">×</label>
                         <div class="modal-002__content">
+                            <p class="label">貴社名</p>
+                            <p class="inp comp"></p>
+                            <p class="label">ご担当者様</p>
+                            <p class="inp name"></p>
+                            <p class="label">メール</p>
+                            <p class="inp email"></p>
+                            <p class="label">折込日／デリバリー開始日</p>
+                            <p class="inp date"></p>
+                            <p class="label">サイズ</p>
+                            <p class="inp size"></p>
                             <p>A地区合計：<span class="sum_a"></span>枚</p>
                             <p>B地区合計：<span class="sum_b"></span>枚</p>
                             <p>C地区合計：<span class="sum_c"></span>枚</p>
@@ -151,14 +160,14 @@
                             <p>E地区合計：<span class="sum_e"></span>枚</p>
                             <p>全地区合計：<span class="sum_all"></span>枚</p>
                             <p></p> 
-                            ☆ここにinput挿入☆
+                            <input type="submit" class="confirm" value="登録">
                         </div>
                     </div>
                     <label for="modal-002__close">
                         <div class="modal-002__background"></div>
                     </label>
                 </div>
-            </div> -->
+            </div>
             
         </form> 
 

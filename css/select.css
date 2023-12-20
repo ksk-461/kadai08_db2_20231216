@@ -23,12 +23,12 @@ header{
 }
 
 .task_1 {
-    border-left: 1px solid gray;
-    border-right: 1px solid gray;
+    border-left: 1px solid #BBBBBB;
+    border-right: 1px solid #BBBBBB;
 }
 
 .list-004 {
-    border: 2px solid #6bb3e6;
+    border: 2px solid #BBBBBB;
     border-radius: 20px;
     margin: 20px 0;
     min-width: 400px;
@@ -38,21 +38,26 @@ header{
     align-items: center;
     margin-bottom: 15px;
     padding: 10px;
-    background-color: #6bb3e6;
     border-radius: 15px 15px 0 0;
     color: #fff;
     font-weight: 600;
 }
 
-/* 孫にだけ指定できる？？ */
-
-/* .task_0.list-004.head {
+.head_0 {
     background-color: #6bb3e6;
-    border-radius: 15px 15px 0 0;    
-} */
+}
+
+.head_1 {
+    background-color: #2589d0;
+}
+
+.head_2 {
+    background-color: #BBBBBB;
+}
+
 
 .list-004 h2 {
-    border-bottom: 1px dashed gray;
+    border-bottom: 1px dashed white;
 }
 
 .list-004 p {
@@ -79,7 +84,7 @@ header{
 }
 
 .delete:hover {
-    background-color: rgb(236, 180, 180);
+    background-color: #F7581D;
 }
 
 .button {

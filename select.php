@@ -13,11 +13,13 @@
 
         while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
             $task_0 .= '<div class="list-004 task_list_0">';
-            $task_0 .= '<div class="head">';
+            $task_0 .= '<div class="head head_0">';
             $task_0 .= '<h2>会社名：'.h($result['company']).'</h2>';
             $task_0 .= '<p>ご担当者：'.h($result['name']) .'様</p>';
             $task_0 .= '<p>'.'連絡先：'.h($result['email']) .'</p>';
             $task_0 .= '<p>'.'折込日：'.h($result['date']).'<p>';
+            $task_0 .= '<p>'.'サイズ：'.h($result['size']).'<p>';
+            $task_0 .= '<p>'.'担当者：未着手<p>';
             $task_0 .= '</div>';
             $task_0 .= '<div class="status">';
             $task_0 .= '<a class="button update" href="detail.php?id='. $result['id'] .'">変更</a>';
@@ -45,11 +47,13 @@
 
         while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
             $task_1 .= '<div class="list-004 task_list_1">';
-            $task_1 .= '<div class="head">';
+            $task_1 .= '<div class="head head_1">';
             $task_1 .= '<h2>会社名：'.h($result['company']).'</h2>';
             $task_1 .= '<p>ご担当者：'.h($result['name']) .'様</p>';
             $task_1 .= '<p>'.'連絡先：'.h($result['email']) .'</p>';
             $task_1 .= '<p>'.'折込日：'.h($result['date']).'<p>';
+            $task_1 .= '<p>'.'サイズ：'.h($result['size']).'<p>';
+            $task_1 .= '<p>'.'担当者：'.h($result['assign']).'<p>';
             $task_1 .= '</div>';
             $task_1 .= '<div class="status">';
             $task_1 .= '<a class="button update" href="detail.php?id='. $result['id'] .'">変更</a>';
@@ -77,11 +81,13 @@
 
         while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
             $task_2 .= '<div class="list-004 task_list_2">';
-            $task_2 .= '<div class="head">';
+            $task_2 .= '<div class="head head_2">';
             $task_2 .= '<h2>会社名：'.h($result['company']).'</h2>';
             $task_2 .= '<p>ご担当者：'.h($result['name']) .'様</p>';
             $task_2 .= '<p>'.'連絡先：'.h($result['email']) .'</p>';
             $task_2 .= '<p>'.'折込日：'.h($result['date']).'<p>';
+            $task_2 .= '<p>'.'サイズ：'.h($result['size']).'<p>';
+            $task_2 .= '<p>'.'担当者：'.h($result['assign']).'<p>';
             $task_2 .= '</div>';
             $task_2 .= '<div class="status">';
             $task_2 .= '<a class="button update" href="detail.php?id='. $result['id'] .'">変更</a>';
@@ -113,7 +119,7 @@
 
     <div id="wrap">
         <div class="list task_0">
-            <h2>未完了</h2>
+            <h2>未着手</h2>
             <?= $task_0 ?>
         </div>
         <div class="list task_1">

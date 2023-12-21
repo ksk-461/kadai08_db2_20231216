@@ -132,9 +132,6 @@
                 
             </div>
 
-
-            <!-- 確認モーダルを表示して、一度試算したかったが時間間に合わず次回に持ち越し -->
-            <!-- このまま使用するとSQLに二重に登録されてしまう。 -->
             <div class="modal-002__wrap">
                 <input type="radio" id="modal-002__open" class="modal_inp_none modal-002__open-input" name="modal-002__trigger tri"/>
                 <label for="modal-002__open" class="modal-002__open-label">確認</label>

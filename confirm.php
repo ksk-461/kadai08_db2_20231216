@@ -1,3 +1,4 @@
+<!-- モーダルで確認のため不使用 -->
 <?php
     $company = $_POST['company'];
     $name = $_POST['name'];

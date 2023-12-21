@@ -31,5 +31,5 @@
 ## 参考にした web サイトなど
 
   - bindParam 関数化する上で実行時にbind
-      https://www.php.net/manual/ja/pdostatement.bindparam.php
-      https://magazine.techacademy.jp/magazine/29052
+  - https://www.php.net/manual/ja/pdostatement.bindparam.php
+  - https://magazine.techacademy.jp/magazine/29052

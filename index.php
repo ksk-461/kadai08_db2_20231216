@@ -150,6 +150,7 @@
                             <p class="inp date"></p>
                             <p class="label">サイズ</p>
                             <p class="inp size"></p>
+                            <p class="label">お申込枚数</p>
                             <p>A地区合計：<span class="sum_a"></span>枚</p>
                             <p>B地区合計：<span class="sum_b"></span>枚</p>
                             <p>C地区合計：<span class="sum_c"></span>枚</p>

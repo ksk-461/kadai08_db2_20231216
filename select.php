@@ -21,7 +21,7 @@
                 $view .= '<p>'.'連絡先：'.h($result['email']) .'</p>';
                 $view .= '<p>'.'折込日：'.h($result['date']).'<p>';
                 $view .= '<p>'.'サイズ：'.h($result['size']).'<p>';
-                $view .= '<p>'.'担当者：未着手<p>';
+                $view .= '<p>'.'担当者：'.h($result['assign']).'<p>';
                 $view .= '</div>';
                 $view .= '<div class="status">';
                 $view .= '<a class="button update" href="detail.php?id='. $result['id'] .'">変更</a>';
@@ -64,7 +64,7 @@
             <?= $task_0 ?>
         </div>
         <div class="list task_1">
-            <h2>着手</h2>
+            <h2>進行中</h2>
             <?= $task_1 ?>
         </div>
         <div class="list task_2">
